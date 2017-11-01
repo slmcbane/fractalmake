@@ -1,5 +1,18 @@
 #pragma once
 
+/*
+ * This file declares and implements a class representing a cubic spline.
+ * After instantiating a Spline points (x, y) can be added; call calculate()
+ * to compute coefficients of the cubic polynomial for each interval.
+ * Spline::operator()(double x) computes the corresponding value of y
+ * according to the computed spline.
+ * 
+ * This isn't an elegant or optimal implementation but it gets the job done
+ * for my purposes. Eigen is a dependency to do an SVD factorization to
+ * compute the spline coefficients (the matrix obtained in my use cases
+ * is numerically low-rank).
+ */
+
 #include <cassert>
 #include <vector>
 

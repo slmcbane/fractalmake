@@ -1,5 +1,14 @@
 #pragma once
 
+/*
+ * Implements color-scale functionality for fractal generation program.
+ * The scale is constructed from a list of pairs (niters, color) where
+ * color is an RGB triplet (defined in the 'fractals' namespace as a struct).
+ * Colors are interpolated using a cubic spline for each of the three primary
+ * colors; if the spline results in a value outside of the interval [0,255]
+ * then either 0 or 255 is returned.
+ */
+
 #include "fractals.hpp"
 #include "spline.hpp"
 
