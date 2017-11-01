@@ -1,5 +1,10 @@
 #pragma once
 
+/*
+ * This file has the core abstractions defining a fractal image and its
+ * computation apart from the particular mathematical object.
+ */
+
 #include "qdbmp.h"
 #include "vector_slice.hpp"
 
