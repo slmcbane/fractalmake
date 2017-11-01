@@ -37,7 +37,7 @@ int main(int argc, char* argv[])
 
     ColorScale colorscale(opts.colors);
 
-    auto point_checker = [&](const fractals::Domain<cmplx>& dom, 
+    auto point_checker = [=](const fractals::Domain<cmplx>& dom, 
         vector_slice<unsigned>& slice) -> void
     {
         auto dx = (dom.upper_right.real() - dom.lower_left.real()) /
