@@ -60,7 +60,7 @@ int main(int argc, char* argv[])
 
     save_fractal_img(result, opts.output == "-" ? stdout : 
                      fopen(opts.output.c_str(), "wb"), 
-        [&] (unsigned iters, fractals::Color& clr)
+    [&] (unsigned iters, fractals::Color& clr)
     {
         clr = iters == 0 ? fractals::Color{0, 0, 0} : colorscale.color(iters);
     });
