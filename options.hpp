@@ -1,5 +1,14 @@
 #pragma once
 
+/*
+ * This module has functionality for parsing an option file for fractalmake.
+ * The top level routine is "get_options" (templated on the complex number
+ * type that you want to use) which reads all of the options and throws an
+ * exception if any are not specified or multiply specified. Lower-level
+ * functions are also exposed so that more fine-grained behavior can be
+ * created if desired.
+ */
+
 #include "fractals.hpp"
 #include "function_parser.hpp"
 
@@ -32,6 +41,10 @@ struct FractalOptions
     std::function<unsigned(const cmplx&)> test_function;
 };
 
+/*
+ * Principle routine from this module that should be used to parse an option
+ * file.
+ */
 template <typename cmplx>
 FractalOptions<cmplx> get_options(std::istream&);
 
