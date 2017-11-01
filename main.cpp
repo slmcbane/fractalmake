@@ -56,8 +56,6 @@ int main(int argc, char* argv[])
 
     auto result = fractals::make_fractal(opts.domain, point_checker, opts.numthreads);
 
-    std::cout << "Saving image now... \n";
-
     save_fractal_img(result, opts.output == "-" ? stdout : 
                      fopen(opts.output.c_str(), "wb"), 
     [&] (unsigned iters, fractals::Color& clr)
