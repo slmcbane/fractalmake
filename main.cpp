@@ -1,3 +1,12 @@
+/*
+ * Driver program (running 'make' builds this and creates the 'fractalmake'
+ * executable). Expects a single command line argument, the name of a 
+ * configuration file to read. This driver expects all options to be 
+ * specified (see the sample config "mandelbrot.cfg" for example and
+ * documentation of options). After parsing the options executes the
+ * setup that was specified and saves the image.
+ */
+
 #include "options.hpp"
 #include "color_scale.hpp"
 #include "fractals.hpp"
